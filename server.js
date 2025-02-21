@@ -1,5 +1,6 @@
 import express from 'express'
-import __dirname from ''
+import __dirname from 'rootpath.js'
+import path from 'path'
 
 const app = express()
 app.use(express.json())
@@ -19,7 +20,7 @@ app.get('/:parameter' , (req, res) => {
 })
 
 app.get('/weblap', (req, res) =>{
-
+    res.sendFile(path.join(__dirname, 'views', 'page.html'))
 })
 
 app.post('/', (req,res) => {
