@@ -1,4 +1,5 @@
 import express from 'express'
+import __dirname from ''
 
 const app = express()
 app.use(express.json())
@@ -16,6 +17,11 @@ app.get('/:parameter' , (req, res) => {
     console.log(param)
     res.json({sajatkey: param}) //vagy .send(param) 
 })
+
+app.get('/weblap', (req, res) =>{
+
+})
+
 app.post('/', (req,res) => {
     // const name = req.body.name
     // const age = req.body.age
